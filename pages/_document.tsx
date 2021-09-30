@@ -7,13 +7,12 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
             crossOrigin="true"
           />
-          <meta name="title" content="Marcelo Reis - Frontend Developer" />
+          <meta name="title" content="Celo Reis - Frontend Developer" />
           <meta
             name="description"
             content="Frontend developer, passionate about Javascript, Typescript and React. Living in Belo Horizonte and trying to develop some awesome stuff"
