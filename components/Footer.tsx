@@ -1,6 +1,12 @@
 import React from "react";
 
-import { FaGithub, FaLinkedin, FaTwitter, FaReddit } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaReddit,
+  FaCodepen,
+} from "react-icons/fa";
 
 function Footer() {
   return (
@@ -47,6 +53,17 @@ function Footer() {
             className="inline-block p-1.5 hover:text-blue-500 transition-colors"
           >
             <FaReddit />
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://codepen.io/TheCeloReis"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block p-1.5 hover:text-blue-500 transition-colors"
+          >
+            <FaCodepen />
           </a>
         </li>
       </ul>

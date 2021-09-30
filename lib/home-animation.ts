@@ -27,10 +27,18 @@ function main() {
   const boxWidth = 1;
   const boxHeight = 1;
   const boxDepth = 1;
-  const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+  const segments = 16;
+  const geometry = new THREE.BoxGeometry(
+    boxWidth,
+    boxHeight,
+    boxDepth,
+    segments,
+    segments,
+    segments
+  );
 
   function makeInstance(geometry, color, x) {
-    const material = new THREE.MeshPhongMaterial({ color });
+    const material = new THREE.MeshPhongMaterial({ color, wireframe: true });
 
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
