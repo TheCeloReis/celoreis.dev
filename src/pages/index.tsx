@@ -1,7 +1,8 @@
+import { logEvent } from "firebase/analytics";
 import Head from "next/head";
 import Image from "next/image";
-
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { analytics } from "../libs/firebase";
 
 export default function Home() {
   return (
@@ -40,6 +41,11 @@ export default function Home() {
               href="https://github.com/TheCeloReis"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                logEvent(analytics, "social_link", {
+                  social_network: "github",
+                })
+              }
             >
               <BsGithub className="p-2" size={48} />
             </a>
@@ -50,6 +56,11 @@ export default function Home() {
               href="https://www.linkedin.com/in/theceloreis/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                logEvent(analytics, "social_link", {
+                  social_network: "linkedin",
+                })
+              }
             >
               <BsLinkedin className="p-2" size={48} />
             </a>
@@ -60,6 +71,11 @@ export default function Home() {
               href="https://twitter.com/TheCeloReis"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                logEvent(analytics, "social_link", {
+                  social_network: "twitter",
+                })
+              }
             >
               <BsTwitter className="p-2" size={48} />
             </a>
