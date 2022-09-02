@@ -11,5 +11,9 @@ const firebaseConfig = {
   measurementId: "G-8C4BT53JDY",
 };
 
-const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
+export let analytics: ReturnType<typeof getAnalytics>;
+
+if (typeof window !== "undefined") {
+  const app = initializeApp(firebaseConfig);
+  analytics = getAnalytics(app);
+}
