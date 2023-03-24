@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { HiOutlinePresentationChartLine } from "react-icons/hi";
 
 const Links = () => {
   return (
@@ -37,6 +38,18 @@ const Links = () => {
           >
             <FaInstagram size={32} />
             <span className="w-full text-center text-lg">Instagram</span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3 hover:bg-zinc-700 transition-all hover:scale-105"
+            href="https://docs.google.com/presentation/d/1fXfdQgX26tG-kGYFSb2i2CFf_iwDyk-4_QPPzS9xEqM/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <HiOutlinePresentationChartLine size={32} />
+            <span className="w-full text-center text-lg">Slideshare</span>
           </a>
         </li>
       </ul>
