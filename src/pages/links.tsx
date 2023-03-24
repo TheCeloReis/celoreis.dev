@@ -8,35 +8,35 @@ const Links = () => {
       <ul className="w-full max-w-md space-y-6 p-4">
         <li>
           <a
-            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3"
+            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3 hover:bg-zinc-700 transition-all hover:scale-105"
             href="https://www.linkedin.com/in/TheCeloReis/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin size={32} />
-            <span className="w-full text-center">Linkedin</span>
+            <span className="w-full text-center text-lg">Linkedin</span>
           </a>
         </li>
         <li>
           <a
-            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3"
+            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3 hover:bg-zinc-700 transition-all hover:scale-105"
             href="https://github.com/TheCeloReis/celoreis.dev"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub size={32} />
-            <span className="w-full text-center">Github</span>
+            <span className="w-full text-center text-lg">Github</span>
           </a>
         </li>
         <li>
           <a
-            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3"
+            className="w-full inline-flex items-center rounded-lg bg-zinc-800 py-2 px-3 hover:bg-zinc-700 transition-all hover:scale-105"
             href="https://www.instagram.com/TheCeloReis/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaInstagram size={32} />
-            <span className="w-full text-center">Instagram</span>
+            <span className="w-full text-center text-lg">Instagram</span>
           </a>
         </li>
       </ul>
