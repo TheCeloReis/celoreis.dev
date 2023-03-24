@@ -49,7 +49,9 @@ const Links = () => {
             rel="noopener noreferrer"
           >
             <HiOutlinePresentationChartLine size={32} />
-            <span className="w-full text-center text-lg">Slideshare</span>
+            <span className="w-full text-center text-lg">
+              Vandalizando a WEB (Slides)
+            </span>
           </a>
         </li>
       </ul>
