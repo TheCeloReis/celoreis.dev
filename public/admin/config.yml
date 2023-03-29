@@ -3,7 +3,7 @@ backend:
   branch: master
   repo: TheCeloReis/celoreis.dev
   api_root: https://api.github.com
-  site_domain: location.hostname
+  site_domain: celoreis.dev
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
