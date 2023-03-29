@@ -5,7 +5,7 @@ import { HiOutlinePresentationChartLine } from "react-icons/hi";
 const Links = () => {
   return (
     // place the div in the middle of the page
-    <div className="grid place-items-center h-screen">
+    <div className="grid place-items-center h-screen text-white">
       <ul className="w-full max-w-md space-y-6 p-4">
         <li>
           <a
