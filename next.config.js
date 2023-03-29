@@ -9,6 +9,10 @@ const nextConfig = {
     });
     return cfg;
   },
+  i18n: {
+    locales: ["en", "pt", "sp", "fr"],
+    defaultLocale: "en",
+  },
 };
 
 module.exports = nextConfig;
