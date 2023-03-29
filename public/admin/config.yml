@@ -1,7 +1,5 @@
 backend:
-  name: github
-  branch: master
-  repo: TheCeloReis/celoreis.dev
+  name: git-gateway
 
 media_folder: "images/uploads"
 
@@ -13,10 +11,10 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{language}}-{{slug}}"
     i18n: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
 i18n:
   structure: multiple_folders
