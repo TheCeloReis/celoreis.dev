@@ -1,4 +1,8 @@
 authors:
-  - name: "123"
-    introduction: "123"
-    slug: "31"
+  - slug: celoreis
+    name: Celo Reis
+    introduction:
+      en: "Frontend Developer"
+      pt: "Desenvolvedor Frontend"
+      sp: "Desarrollador Frontend"
+      fr: "Développeur Frontend"
