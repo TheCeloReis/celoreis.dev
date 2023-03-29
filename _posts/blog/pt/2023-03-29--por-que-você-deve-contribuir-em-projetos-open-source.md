@@ -6,13 +6,13 @@ date: 2023-03-29T19:53:53.816Z
 
 Você já ouviu falar sobre projetos open source, mas sabe por que é importante contribuir para eles? Neste artigo, discutiremos os benefícios de contribuir para projetos de código aberto e como você pode começar a fazer parte dessa comunidade incrível.
 
-**O que é open source?**
+# O que é open source?
 
 O termo "open source" refere-se a um tipo de software cujo código-fonte é disponibilizado publicamente para que qualquer pessoa possa visualizar, modificar e distribuir. Essa abordagem permite que a comunidade global de desenvolvedores colabore em projetos, trazendo melhorias e inovações constantes.
 
-**Benefícios**
+## Benefícios
 
-**Melhorar habilidades técnicas**
+### Melhorar habilidades técnicas
 
 Contribuir para projetos open source é uma excelente maneira de aprimorar suas habilidades técnicas. Você terá a oportunidade de trabalhar com diversas tecnologias, enfrentar desafios reais e aprender com outros desenvolvedores experientes.
 
