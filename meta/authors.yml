@@ -1,8 +1,4 @@
 authors:
   - slug: celoreis
     name: Celo Reis
-    introduction:
-      en: "Frontend Developer"
-      pt: "Desenvolvedor Frontend"
-      sp: "Desarrollador Frontend"
-      fr: "Développeur Frontend"
+    introduction: Frontend Developer
