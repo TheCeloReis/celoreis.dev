@@ -13,13 +13,22 @@ const firebaseConfig = {
   measurementId: "G-8C4BT53JDY",
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const isBrowser = typeof window !== "undefined";
+
+let analytics: ReturnType<typeof getAnalytics>;
+
+if (isBrowser) {
+  const app = initializeApp(firebaseConfig);
+  analytics = getAnalytics(app);
+}
 
 export const useAnalytics = () => {
   const router = useRouter();
   const { pathname } = router;
+
   useEffect(() => {
+    if (!isBrowser) return;
+
     logEvent(analytics, "page_view", {
       page_path: pathname,
       page_location: window.location.href,
