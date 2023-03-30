@@ -2,18 +2,14 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import Layout from "@/components/Layout";
 import Image from "next/image";
+import BasicMeta from "@/components/BasicMeta";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <Layout>
-      <Head>
-        <title>Celo Reis</title>
-        <meta name="description" content="Celo Reis' personal website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <BasicMeta />
 
       <main className="mx-auto max-w-3xl mt-8 px-4">
         <div className="flex flex-col md:flex-row">

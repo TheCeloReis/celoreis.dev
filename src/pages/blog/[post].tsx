@@ -6,6 +6,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import dayjs from "@/libs/dayjs";
+import BasicMeta from "@/components/BasicMeta";
 
 type PostPagePropsType = {
   post: PostContent;
@@ -15,6 +16,12 @@ type PostPagePropsType = {
 const Post = (props: PostPagePropsType) => {
   return (
     <Layout>
+      <BasicMeta
+        title={props.post.title}
+        description={props.post.description}
+        author="Celo Reis"
+      />
+
       <div className="mt-4 w-full max-w-3xl mx-auto">
         <div
           className="relative h-48 w-full-mt-8 mb-8 flex-none bg-cover md:rounded-b-3xl -mt-8 text-center overflow-hidden bg-center"
