@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import BasicMeta from "@/components/BasicMeta";
+import OpenGraphMeta from "@/components/OpenGraphMeta";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <BasicMeta />
+      <OpenGraphMeta />
 
       <main className="mx-auto max-w-3xl mt-8 px-4">
         <div className="flex flex-col md:flex-row">

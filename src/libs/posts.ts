@@ -96,7 +96,20 @@ export const getPosts: (options?: { locale?: string }) => PostContent[] = ({
     posts.push(...post);
   });
 
-  return posts;
+  return posts.sort((a, b) => {
+    const aDate = new Date(a.date);
+    const bDate = new Date(b.date);
+
+    if (aDate > bDate) {
+      return -1;
+    }
+
+    if (aDate < bDate) {
+      return 1;
+    }
+
+    return 0;
+  });
 };
 
 export const getPostBySlug: (slug: string, locale: string) => PostContent = (

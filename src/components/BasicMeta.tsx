@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { useSiteConfig } from "@/libs/useSiteConfig";
 
 type BasicMetaPropsType = {
   title?: string;
@@ -7,17 +8,17 @@ type BasicMetaPropsType = {
   author?: string;
 };
 
-const siteTitle = "Celo Reis";
-const siteDescription =
-  "Celo Reis is a software engineer and a frontend developer. He is a passionate developer who loves to learn new technologies and build cool stuff.";
-
 const BasicMeta = ({ title, description, author }: BasicMetaPropsType) => {
+  const siteConfig = useSiteConfig();
+
   return (
     <Head>
-      <title>{title ? [title, siteTitle].join(" | ") : siteTitle}</title>
+      <title>
+        {title ? [title, siteConfig.title].join(" | ") : siteConfig.title}
+      </title>
       <meta
         name="description"
-        content={description ? description : siteDescription}
+        content={description ? description : siteConfig.description}
       />
       {author ? <meta name="author" content={author} /> : null}
     </Head>

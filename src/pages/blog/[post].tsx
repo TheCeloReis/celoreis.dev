@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import dayjs from "@/libs/dayjs";
 import BasicMeta from "@/components/BasicMeta";
+import OpenGraphMeta from "@/components/OpenGraphMeta";
 
 type PostPagePropsType = {
   post: PostContent;
@@ -20,6 +21,13 @@ const Post = (props: PostPagePropsType) => {
         title={props.post.title}
         description={props.post.description}
         author="Celo Reis"
+      />
+      <OpenGraphMeta
+        path={`/blog/${props.post.slug}`}
+        title={props.post.title}
+        description={props.post.description}
+        image={props.post.thumbnail}
+        isArticle={true}
       />
 
       <div className="mt-4 w-full max-w-3xl mx-auto">

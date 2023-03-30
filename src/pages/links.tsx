@@ -1,4 +1,5 @@
 import BasicMeta from "@/components/BasicMeta";
+import OpenGraphMeta from "@/components/OpenGraphMeta";
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
@@ -7,6 +8,11 @@ const Links = () => {
   return (
     <div className="grid place-items-center h-screen text-white">
       <BasicMeta title="Links" />
+      <OpenGraphMeta
+        title="Links"
+        description="Here you can find some of my social media links."
+      />
+
       <ul className="w-full max-w-md space-y-6 p-4">
         <li>
           <a
