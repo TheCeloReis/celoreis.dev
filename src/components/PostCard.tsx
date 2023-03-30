@@ -9,6 +9,7 @@ type PostCardPropsType = {
   title: string;
   description: string;
   date: string;
+  locale: string;
 };
 
 const PostCard = (props: PostCardPropsType) => {
@@ -40,7 +41,7 @@ const PostCard = (props: PostCardPropsType) => {
           <div className="text-sm">
             <p className="text-gray-900 leading-none">Celo Reis</p>
             <p className="text-gray-600">
-              {dayjs(props.date).locale("pt").format("LLL")}
+              {dayjs(props.date).locale(props.locale).format("LLL")}
             </p>
           </div>
         </div>

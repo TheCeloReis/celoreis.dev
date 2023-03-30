@@ -19,6 +19,7 @@ body {
 .blog-post {
   @apply text-gray-900;
   @apply leading-7;
+  @apply px-6;
 }
 
 .blog-post h1 {
