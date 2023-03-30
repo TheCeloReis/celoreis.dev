@@ -25,6 +25,13 @@ collections:
         name: "title"
         widget: "string"
         i18n: true
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        i18n: true
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
@@ -54,9 +61,6 @@ collections:
           displayFields:
             - "tags.*.name"
           valueField: "tags.*.slug"
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -67,7 +71,7 @@ collections:
     delete: false
 
     structure: single_file
-    locales: [en, pt, sp, fr]
+    locales: [en, pt, es, fr]
     default_locale: en
 
     editor:
@@ -119,5 +123,5 @@ collections:
 
 i18n:
   structure: multiple_folders
-  locales: [en, pt, sp, fr]
+  locales: [en, pt, es, fr]
   default_locale: en
