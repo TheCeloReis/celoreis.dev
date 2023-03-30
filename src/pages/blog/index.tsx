@@ -2,6 +2,7 @@ import { getPosts, PostContent } from "@/libs/posts";
 import { GetStaticProps } from "next";
 import React from "react";
 import PostCard from "@/components/PostCard";
+import Layout from "@/components/Layout";
 
 type BlogPagePropsType = {
   posts: PostContent[];
@@ -9,13 +10,15 @@ type BlogPagePropsType = {
 
 const Blog = (props: BlogPagePropsType) => {
   return (
-    <div className="max-w-3xl mx-auto pt-4">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
+    <Layout>
+      <div className="max-w-3xl mx-auto pt-4">
+        <h1 className="text-4xl font-bold mb-8">Blog</h1>
 
-      {props.posts.map((post) => (
-        <PostCard {...post} key={post.slug} />
-      ))}
-    </div>
+        {props.posts.map((post) => (
+          <PostCard {...post} key={post.slug} />
+        ))}
+      </div>
+    </Layout>
   );
 };
 

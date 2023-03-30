@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* make the page always have full heigth */
+html,
+body {
+  @apply min-h-full;
+}
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply relative;
+}
+
 .blog-post {
   @apply text-gray-900;
   @apply leading-7;

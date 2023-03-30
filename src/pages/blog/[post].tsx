@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import Layout from "@/components/Layout";
 
 type PostPagePropsType = {
   post: PostContent;
@@ -11,15 +12,17 @@ type PostPagePropsType = {
 
 const Post = (props: PostPagePropsType) => {
   return (
-    <div className="mt-4 w-full max-w-3xl mx-auto">
-      <h1 className="text-4xl font-bold text-gray-900 text-center mb-8">
-        {props.post.title}
-      </h1>
+    <Layout>
+      <div className="mt-4 w-full max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 text-center mb-8">
+          {props.post.title}
+        </h1>
 
-      <div className="blog-post">
-        <MDXRemote {...props.mdxSource} />
+        <div className="blog-post">
+          <MDXRemote {...props.mdxSource} />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
