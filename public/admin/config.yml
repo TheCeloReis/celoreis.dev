@@ -70,10 +70,6 @@ collections:
     label: "Meta"
     delete: false
 
-    structure: single_file
-    locales: [en, pt, es, fr]
-    default_locale: en
-
     editor:
       preview: false
     files:
@@ -81,7 +77,6 @@ collections:
         label: "Authors"
         file: "meta/authors.yml"
         description: "Author descriptions"
-        i18n: true
         fields:
           - name: authors
             label: Authors
@@ -99,12 +94,11 @@ collections:
               - label: "Introduction"
                 name: "introduction"
                 widget: "text"
-                i18n: true
+
       - name: "tags"
         label: "Tags"
         file: "meta/tags.yml"
         description: "List of tags"
-        i18n: true
         fields:
           - name: tags
             label: Tags
@@ -119,9 +113,8 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Tag name for displaying on the site"
-                i18n: true
 
 i18n:
   structure: multiple_folders
-  locales: [en, pt, es, fr]
+  locales: [en, pt, es]
   default_locale: en

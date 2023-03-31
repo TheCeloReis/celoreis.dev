@@ -20,8 +20,8 @@ const Blog = (props: BlogPagePropsType) => {
         description="Welcome to my blog! Here you can find some of my thoughts and ideas."
       />
 
-      <div className="max-w-3xl mx-auto pt-4">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+      <div className="max-w-3xl mx-auto pt-4 mb-16 px-4 md:px-0">
+        <h1 className="text-4xl font-bold mb-12">Blog</h1>
 
         <div className="space-y-4">
           {props.posts.map((post) => (
