@@ -26,7 +26,40 @@ collections:
         fields:
           - { label: Title, name: title, widget: string, i18n: true }
           - { label: Intro, name: intro, widget: markdown, i18n: true }
-          - { label: Intro2, name: intro2, widget: markdown, i18n: true }
+          - label: "Experiences"
+            name: "experiences"
+            widget: "list"
+            summary: "{{fields.jobTitle}} at {{fields.company}}"
+            i18n: true
+            fields:
+              - { label: Job Title, name: jobTitle, widget: string, i18n: true }
+              - { label: Company, name: company, widget: string, i18n: true }
+              - { label: Location, name: location, widget: string, i18n: true }
+              - {
+                  label: Company Logo,
+                  name: image,
+                  widget: image,
+                  i18n: "duplicate",
+                }
+              - {
+                  label: Start Date,
+                  name: startDate,
+                  widget: datetime,
+                  i18n: "duplicate",
+                  date_format: "YYYY-MM-DD",
+                  time_format: false,
+                }
+              - {
+                  label: End Date,
+                  name: endDate,
+                  widget: datetime,
+                  i18n: "duplicate",
+                  date_format: "YYYY-MM-DD",
+                  time_format: false,
+                  required: false,
+                }
+              - { label: Description, name: description, widget: markdown }
+              - { label: Skills, name: skills, widget: string, i18n: true }
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
