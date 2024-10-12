@@ -8,14 +8,19 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "cms": "npx decap-server"
   },
   "dependencies": {
-    "decap-cms-app": "^3.3.3",
+    "@react-aria/optimize-locales-plugin": "^1.1.2",
     "next": "14.2.15",
     "react": "^18",
+    "react-aria-components": "^1.4.0",
     "react-dom": "^18",
-    "react-markdown": "^8.0.7"
+    "react-feather": "^2.0.10",
+    "react-markdown": "^8.0.7",
+    "tailwind-merge": "^2.5.3",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

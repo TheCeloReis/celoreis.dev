@@ -1,11 +1,10 @@
 import React from "react";
+import "@/styles/globals.css";
 
-const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
-  return (
-    <html>
-      <body>{props.children}</body>
-    </html>
-  );
-};
-
-export default Layout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+}
