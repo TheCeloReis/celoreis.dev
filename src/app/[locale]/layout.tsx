@@ -17,7 +17,7 @@ export default function RootLayout({
 
         <div className="min-h-[calc(100vh_-_64px)]">{children}</div>
 
-        <Footer />
+        <Footer locale={locale} />
       </body>
     </html>
   );

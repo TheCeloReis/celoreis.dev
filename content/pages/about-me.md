@@ -28,7 +28,7 @@ en:
       company: Alma
       jobTitle: Founding Frontend Engineer
       image: /images/uploads/alma-logo.jpeg
-    - jobTitle: " Frontend Engineer"
+    - jobTitle: "Frontend Engineer"
       company: FARFETCH
       description: >-
         Developed highly responsive and adaptive user interfaces that provided
@@ -72,7 +72,7 @@ en:
 
         Collaborated closely with data scientists, AI researchers, and healthcare professionals to develop user-centric features that addressed real-world healthcare challenges.
       skills: vue.js,typescript,python,javascript,react,angular,react native
-    - jobTitle: " Web Support Engineer"
+    - jobTitle: "Web Support Engineer"
       company: Capitol Canary from Quorum
       location: Arlington, Virginia, United States · Remote
       image: /images/uploads/canary-logo.jpeg

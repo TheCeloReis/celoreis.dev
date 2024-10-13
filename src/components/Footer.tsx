@@ -3,6 +3,7 @@ import { Kode_Mono } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import { GitHub, Linkedin, Twitter } from "react-feather";
+import LanguageSelector from "./LanguageSelector";
 
 const currentYear = new Date().getFullYear();
 
@@ -12,7 +13,11 @@ const kodeMono = Kode_Mono({
   subsets: ["latin"],
 });
 
-const Footer = () => {
+type FooterProps = {
+  locale: string;
+};
+
+const Footer: React.FC<FooterProps> = (props) => {
   return (
     <footer className="py-2 pt-8 px-4 bg-slate-100 dark:bg-zinc-800 w-full">
       <div className="max-w-3xl mx-auto">
@@ -36,15 +41,19 @@ const Footer = () => {
                 <GitHub className="w-7 h-7" />
                 <span className="sr-only">Github</span>
               </Link>
-              <Link href="https://www.linkedin.com/in/theceloreis/">
+              <Link href="https://github.com/TheCeloReis">
                 <Linkedin className="w-7 h-7" />
                 <span className="sr-only">Linkedin</span>
               </Link>
-              <Link href="https://www.linkedin.com/in/theceloreis/">
+              <Link href="https://x.com/theceloreis">
                 <Twitter className="w-7 h-7" />
                 <span className="sr-only">Twitter</span>
               </Link>
             </div>
+          </div>
+
+          <div>
+            <LanguageSelector currentLocale={props.locale} />
           </div>
         </div>
 
