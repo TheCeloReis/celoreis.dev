@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { LocaleType } from "@/utils/constants";
 import fm from "front-matter";
+import dayjs from "dayjs";
 
 export type ExperienceType = {
   startDate: string;
@@ -29,5 +30,7 @@ export const getExperiences = (locale: LocaleType) => {
     return fm<Record<LocaleType, ExperienceType>>(file).attributes[locale];
   });
 
-  return content;
+  return content.sort((a, b) => {
+    return dayjs(b.startDate).unix() - dayjs(a.startDate).unix();
+  });
 };

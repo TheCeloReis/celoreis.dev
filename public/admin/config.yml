@@ -19,9 +19,22 @@ collections:
       structure: single_file
       locales: [en, pt, es]
     files:
-      - label: "About Page"
+      - label: "About"
         name: "about"
         file: "content/pages/about-me.md"
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Intro, name: intro, widget: markdown, i18n: true }
+      - label: "Blog"
+        name: "blog"
+        file: "content/pages/blog.md"
         i18n: true
         fields:
           - { label: Title, name: title, widget: string, i18n: true }
@@ -65,7 +78,7 @@ collections:
           required: false,
         }
       - { label: Description, name: description, widget: markdown }
-      - { label: Skills, name: skills, widget: string, i18n: true }
+      - { label: Skills, name: skills, widget: string, i18n: "duplicate" }
 
   - name: "blog"
     label: "Blog"
