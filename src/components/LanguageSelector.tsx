@@ -31,18 +31,20 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
   };
 
   return (
-    <div className="flex flex-col">
-      {locales
-        .filter((l) => l.locale !== props.currentLocale)
-        .map((locale, index) => (
-          <Link
-            className="px-1"
-            key={index}
-            href={replaceLocale(locale.locale)}
-          >
-            {locale.label}
-          </Link>
-        ))}
+    <div>
+      <p className="font-medium text-lg mb-3">Change language:</p>
+
+      <ul className="flex flex-col">
+        {locales
+          .filter((l) => l.locale !== props.currentLocale)
+          .map((locale) => (
+            <li key={locale.locale}>
+              <Link className="px-1" href={replaceLocale(locale.locale)}>
+                {locale.label}
+              </Link>
+            </li>
+          ))}
+      </ul>
     </div>
   );
 };

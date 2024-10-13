@@ -53,6 +53,8 @@ const Footer: React.FC<FooterProps> = (props) => {
             </div>
           </div>
 
+          <div></div>
+
           <div>
             <LanguageSelector currentLocale={props.locale} />
           </div>

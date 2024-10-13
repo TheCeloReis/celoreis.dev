@@ -84,17 +84,40 @@ collections:
     label: "Blog"
     folder: "content/blog-posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    i18n: true
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string", i18n: true }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    i18n:
+      structure: single_file
+      locales: [en, pt, es]
+    fields:
       - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          i18n: duplicate,
+          label: "SEO",
+          name: "seo",
+          widget: "object",
+          i18n: true,
+          fields:
+            [
+              {
+                label: "Title",
+                name: "title",
+                widget: "string",
+                i18n: true,
+                required: true,
+              },
+              {
+                label: "Description",
+                name: "description",
+                widget: "string",
+                i18n: true,
+              },
+              {
+                label: "Open Graph Image",
+                name: "image",
+                widget: "image",
+                i18n: "duplicate",
+              },
+            ],
         }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
       - {
           label: "Featured Image",
           name: "thumbnail",
@@ -102,9 +125,10 @@ collections:
           i18n: duplicate,
         }
       - {
-          label: "Rating (scale of 1-5)",
-          name: "rating",
-          widget: "number",
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
           i18n: duplicate,
         }
+      - { label: "Tags", name: "tags", widget: "string", i18n: duplicate }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
