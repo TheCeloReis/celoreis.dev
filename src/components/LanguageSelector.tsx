@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const locales = [
@@ -23,8 +24,10 @@ type LanguageSelectorProps = {
 };
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
+  const pathName = usePathname();
+
   const replaceLocale = (locale: string) => {
-    return window.location.pathname.replace(props.currentLocale, locale);
+    return pathName.replace(props.currentLocale, locale);
   };
 
   return (

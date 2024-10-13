@@ -25,6 +25,12 @@ collections:
         i18n: true
         fields:
           - { label: Title, name: title, widget: string, i18n: true }
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              i18n: true,
+            }
           - { label: Intro, name: intro, widget: markdown, i18n: true }
 
   - label: "Experiences"

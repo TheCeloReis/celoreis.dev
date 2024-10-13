@@ -11,6 +11,7 @@ const kodeMono = Kode_Mono({
   weight: ["400", "700"],
   display: "swap",
   subsets: ["latin"],
+  fallback: ["Courier New", "monospace"],
 });
 
 type FooterProps = {
