@@ -24,6 +24,7 @@
     "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
+    "@next/third-parties": "^14.2.15",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
