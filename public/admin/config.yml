@@ -1,120 +1,134 @@
+local_backend: true
+
 backend:
-  name: github
-  repo: TheCeloReis/celoreis.dev
+  name: git-gateway
+  branch: reboot # Branch to update (optional; defaults to master)
 
-media_folder: public/images/uploads
-public_folder: /images/uploads
-site_domain: location.hostname
-
-collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    extension: "mdx"
-    format: "frontmatter"
-    create: true
-    identifier_field: slug
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}}"
-    i18n: true
-    fields:
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-        i18n: true
-      - label: "Description"
-        name: "description"
-        widget: "text"
-        i18n: true
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-      - label: Author
-        name: "author"
-        widget: relation
-        collection: "meta"
-        file: "authors"
-        searchFields:
-          - "authors.*.name"
-        displayFields:
-          - "authors.*.name"
-        valueField: "authors.*.slug"
-      - label: Tags
-        label_singular: "Tag"
-        name: "tags"
-        widget: list
-        summary: "{{fields.tag}}"
-        field:
-          label: Tag
-          name: tag
-          widget: relation
-          collection: "meta"
-          file: "tags"
-          searchFields:
-            - "tags.*.name"
-          displayFields:
-            - "tags.*.name"
-          valueField: "tags.*.slug"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-        i18n: true
-
-  - name: "meta"
-    label: "Meta"
-    delete: false
-
-    editor:
-      preview: false
-    files:
-      - name: "authors"
-        label: "Authors"
-        file: "meta/authors.yml"
-        description: "Author descriptions"
-        fields:
-          - name: authors
-            label: Authors
-            label_singular: "Author"
-            widget: list
-            fields:
-              - label: "Slug"
-                name: "slug"
-                widget: "string"
-                hint: "The part of a URL identifies the author"
-              - label: "Name"
-                name: "name"
-                widget: "string"
-                hint: "First and Last"
-              - label: "Introduction"
-                name: "introduction"
-                widget: "text"
-
-      - name: "tags"
-        label: "Tags"
-        file: "meta/tags.yml"
-        description: "List of tags"
-        fields:
-          - name: tags
-            label: Tags
-            label_singular: "Tag"
-            widget: list
-            fields:
-              - label: "Slug"
-                name: "slug"
-                widget: "string"
-                hint: "The part of a URL identifies the tag"
-              - label: "Display Name"
-                name: "name"
-                widget: "string"
-                hint: "Tag name for displaying on the site"
+media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 i18n:
   structure: multiple_folders
   locales: [en, pt, es]
   default_locale: en
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    i18n:
+      structure: single_file
+      locales: [en, pt, es]
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/pages/about-me.md"
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Intro, name: intro, widget: markdown, i18n: true }
+      - label: "Blog"
+        name: "blog"
+        file: "content/pages/blog.md"
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Intro, name: intro, widget: markdown, i18n: true }
+
+  - label: "Experiences"
+    name: "experiences"
+    summary: "{{jobTitle}} at {{company}}"
+    folder: "content/experiences"
+    slug: "{{startDate}}-{{company}}"
+    create: true
+    i18n:
+      structure: single_file
+      locales: [en, pt, es]
+    fields:
+      - { label: Job Title, name: jobTitle, widget: string, i18n: true }
+      - { label: Company, name: company, widget: string, i18n: true }
+      - { label: Location, name: location, widget: string, i18n: true }
+      - { label: Company Logo, name: image, widget: image, i18n: "duplicate" }
+      - {
+          label: Start Date,
+          name: startDate,
+          widget: datetime,
+          i18n: "duplicate",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - {
+          label: End Date,
+          name: endDate,
+          widget: datetime,
+          i18n: "duplicate",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          required: false,
+        }
+      - { label: Description, name: description, widget: markdown }
+      - { label: Skills, name: skills, widget: string, i18n: "duplicate" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog-posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    i18n:
+      structure: single_file
+      locales: [en, pt, es]
+    fields:
+      - {
+          label: "SEO",
+          name: "seo",
+          widget: "object",
+          i18n: true,
+          fields:
+            [
+              {
+                label: "Title",
+                name: "title",
+                widget: "string",
+                i18n: true,
+                required: true,
+              },
+              {
+                label: "Description",
+                name: "description",
+                widget: "string",
+                i18n: true,
+              },
+              {
+                label: "Open Graph Image",
+                name: "image",
+                widget: "image",
+                i18n: "duplicate",
+              },
+            ],
+        }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          i18n: duplicate,
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          i18n: duplicate,
+        }
+      - { label: "Tags", name: "tags", widget: "string", i18n: duplicate }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
