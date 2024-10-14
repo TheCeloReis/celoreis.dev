@@ -10,15 +10,6 @@ import { Metadata } from "next";
 
 dayjs.extend(relativeTime);
 
-export const generateMetadata = ({ params }: AboutMePageProps): Metadata => {
-  const content = getAboutMePage(params.locale);
-
-  return {
-    title: `${content.title} - Celo Reis`,
-    description: `${content.description}`,
-  };
-};
-
 type AboutMePageProps = {
   params: {
     locale: LocaleType;
@@ -55,6 +46,15 @@ const HomePage: React.FC<AboutMePageProps> = (props) => {
 
 export const generateStaticParams = async () => {
   return LOCALES.map((locale) => ({ locale }));
+};
+
+export const generateMetadata = ({ params }: AboutMePageProps): Metadata => {
+  const content = getAboutMePage(params.locale);
+
+  return {
+    title: `${content.title} - Celo Reis`,
+    description: `${content.description}`,
+  };
 };
 
 export default HomePage;

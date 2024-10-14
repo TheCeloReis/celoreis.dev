@@ -46,6 +46,27 @@ collections:
             }
           - { label: Intro, name: intro, widget: markdown, i18n: true }
 
+  - label: "Templates"
+    name: "templates"
+    i18n:
+      structure: single_file
+      locales: [en, pt, es]
+    files:
+      - label: "Footer"
+        name: "footer"
+        file: "content/templates/footer.md"
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              i18n: true,
+            }
+          - { label: Copyrigth, name: copyrigth, widget: string, i18n: true }
+          - { label: Language, name: language, widget: string, i18n: true }
+
   - label: "Experiences"
     name: "experiences"
     summary: "{{jobTitle}} at {{company}}"

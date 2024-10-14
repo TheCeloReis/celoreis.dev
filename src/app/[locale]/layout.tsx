@@ -1,5 +1,6 @@
-import Footer from "@/components/Footer";
+import Footer from "@/components/templates/Footer";
 import Topbar from "@/components/Topbar";
+import { LocaleType } from "@/utils/constants";
 import { LocalizedStringProvider } from "react-aria-components/i18n";
 
 export default function RootLayout({
@@ -7,7 +8,7 @@ export default function RootLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: LocaleType };
 }) {
   return (
     <html className="dark" lang={locale}>

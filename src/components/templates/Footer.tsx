@@ -3,7 +3,9 @@ import { Kode_Mono } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import { GitHub, Linkedin, Twitter } from "react-feather";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "../LanguageSelector";
+import { LocaleType } from "@/utils/constants";
+import { getFooter } from "@/cms/footer";
 
 const currentYear = new Date().getFullYear();
 
@@ -15,16 +17,18 @@ const kodeMono = Kode_Mono({
 });
 
 type FooterProps = {
-  locale: string;
+  locale: LocaleType;
 };
 
 const Footer: React.FC<FooterProps> = (props) => {
+  const content = getFooter(props.locale);
+
   return (
     <footer className="py-2 pt-8 px-4 bg-slate-100 dark:bg-zinc-800 w-full">
       <div className="max-w-3xl mx-auto">
         <div className="mb-4 grid grid-cols-3">
           <div>
-            <h1
+            <p
               className={cn(
                 "dark:text-primary-400 text-primary-500 text-3xl font-bold select-none mb-3",
                 kodeMono.className,
@@ -32,10 +36,8 @@ const Footer: React.FC<FooterProps> = (props) => {
             >
               <span>Celo</span>&nbsp;
               <span>Reis</span>
-            </h1>
-            <p>
-              Frontend developer, JavaScript enthusiast, and content creator.
             </p>
+            <p>{content.description}</p>
 
             <div className="mt-4 flex space-x-6">
               <Link href="https://www.linkedin.com/in/theceloreis/">
@@ -56,12 +58,15 @@ const Footer: React.FC<FooterProps> = (props) => {
           <div></div>
 
           <div>
-            <LanguageSelector currentLocale={props.locale} />
+            <LanguageSelector
+              label={content.language}
+              currentLocale={props.locale}
+            />
           </div>
         </div>
 
         <p className="text-sm text-center">
-          All rights reserved © Celo Reis {currentYear}
+          {content.copyright} © Celo Reis {currentYear}
         </p>
       </div>
     </footer>

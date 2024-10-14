@@ -6,6 +6,7 @@ import { getBlogPage } from "@/cms/pages";
 import { getAllPosts } from "@/cms/blog";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { Metadata } from "next";
 
 type BlogPageProps = {
   params: {
@@ -59,6 +60,15 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
 
 export const generateStaticParams = async () => {
   return LOCALES.map((locale) => ({ locale }));
+};
+
+export const generateMetadata = ({ params }: BlogPageProps): Metadata => {
+  const content = getBlogPage(params.locale);
+
+  return {
+    title: `${content.title} - Celo Reis`,
+    description: `${content.description}`,
+  };
 };
 
 export default BlogPage;
