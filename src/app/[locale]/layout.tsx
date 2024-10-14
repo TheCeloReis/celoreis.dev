@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html className="dark" lang={locale}>
-      <body className="pt-16 bg-slate-100 text-zinc-900 dark:bg-zinc-900 dark:text-slate-100 min-h-screen">
+      <body className="pt-16 bg-slate-50 text-zinc-900 dark:bg-zinc-900 dark:text-slate-100 min-h-screen">
         <Topbar locale={locale} />
         <LocalizedStringProvider locale={locale} />
 

@@ -20,7 +20,10 @@ type TopbarProps = {
 };
 
 const Topbar: React.FC<TopbarProps> = (props) => {
-  const { isDarkMode, toggle } = useDarkMode({ initializeWithValue: false });
+  const { isDarkMode, toggle } = useDarkMode({
+    initializeWithValue: false,
+    defaultValue: true,
+  });
 
   useEffect(() => {
     if (isDarkMode) {

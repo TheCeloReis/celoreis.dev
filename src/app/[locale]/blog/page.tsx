@@ -34,7 +34,7 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
         {posts.map((post, index) => (
           <div
             key={index}
-            className="border border-zinc-800 hover:border-primary-400 transition-colors rounded-2xl overflow-hidden"
+            className="border border-zinc-400 dark:border-zinc-800 hover:border-primary-400 transition-colors rounded-2xl overflow-hidden"
           >
             <Link
               className="block p-4"
@@ -44,7 +44,7 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
                 {dayjs(post.date).format("DD MMMM, YYYY")}
               </p>
 
-              <h2 className="text-2xl text-primary-500 dark:text-primary-400 mb-3">
+              <h2 className="text-2xl text-zinc-900 dark:text-white mb-3 font-bold">
                 {post.title}
               </h2>
 

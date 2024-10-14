@@ -34,13 +34,15 @@ const Experiences: React.FC<ExperiencesProps> = (props) => {
                   {experience.jobTitle}
                 </h3>
                 <p className="font-medium">{experience.company}</p>
-                <p className="leading-3 inline-flex space-x-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <p className="leading-3 inline-flex text-sm text-zinc-600 dark:text-zinc-400">
                   <span>{dayjs(experience.startDate).format("MM/YYYY")}</span>
+                  <span className="mx-1">-</span>
                   <span>
                     {experience.endDate
                       ? dayjs(experience.endDate).format("MM/YYYY")
                       : "Present"}
                   </span>
+                  <span className="mx-1">·</span>
                   <span>
                     {dayjs(experience.endDate || dayjs()).to(
                       dayjs(experience.startDate),
