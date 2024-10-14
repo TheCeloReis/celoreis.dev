@@ -9,7 +9,9 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <GoogleAnalytics gaId="G-8C4BT53JDY" />
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId="G-8C4BT53JDY" />
+      )}
       {children}
     </>
   );
