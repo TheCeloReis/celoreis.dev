@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = (props) => {
 
   return (
     <footer className="py-2 pt-8 px-4 bg-slate-100 dark:bg-zinc-800 w-full">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="mb-4 grid grid-cols-3">
           <div>
             <p
