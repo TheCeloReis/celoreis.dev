@@ -5,14 +5,16 @@ import dayjs from "dayjs";
 import React from "react";
 
 type BlogPostPageProps = {
-  params: {
+  params: Promise<{
     locale: LocaleType;
     post_slug: string;
-  };
+  }>;
 };
 
-const BlogPostPage: React.FC<BlogPostPageProps> = (props) => {
-  const post = getPostBySlug(props.params.post_slug, props.params.locale);
+const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
+  const { locale, post_slug } = await params;
+
+  const post = getPostBySlug(post_slug, locale);
 
   if (!post) {
     return null;
@@ -35,8 +37,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = (props) => {
   );
 };
 
-export const generateMetadata = (props: BlogPostPageProps) => {
-  const post = getPostBySlug(props.params.post_slug, props.params.locale);
+export const generateMetadata = async ({ params }: BlogPostPageProps) => {
+  const { locale, post_slug } = await params;
+
+  const post = getPostBySlug(post_slug, locale);
 
   return {
     title: `${post?.title} - Celo Reis`,

@@ -9,15 +9,16 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 type BlogPageProps = {
-  params: {
+  params: Promise<{
     locale: LocaleType;
-  };
+  }>;
 };
 
-const BlogPage: React.FC<BlogPageProps> = (props) => {
-  const content = getBlogPage(props.params.locale);
+const BlogPage: React.FC<BlogPageProps> = async ({ params }) => {
+  const { locale } = await params;
 
-  const posts = getAllPosts(props.params.locale);
+  const content = getBlogPage(locale);
+  const posts = getAllPosts(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24">
@@ -37,10 +38,7 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
             key={index}
             className="border border-zinc-400 dark:border-zinc-800 hover:border-primary-400 transition-colors rounded-2xl overflow-hidden"
           >
-            <Link
-              className="block p-4"
-              href={`/${props.params.locale}/blog/${post.slug}`}
-            >
+            <Link className="block p-4" href={`/${locale}/blog/${post.slug}`}>
               <p className="text-zinc-800 dark:text-zinc-400 text-sm mb-1">
                 {dayjs(post.date).format("DD MMMM, YYYY")}
               </p>
@@ -62,8 +60,12 @@ export const generateStaticParams = async () => {
   return LOCALES.map((locale) => ({ locale }));
 };
 
-export const generateMetadata = ({ params }: BlogPageProps): Metadata => {
-  const content = getBlogPage(params.locale);
+export const generateMetadata = async ({
+  params,
+}: BlogPageProps): Promise<Metadata> => {
+  const { locale } = await params;
+
+  const content = getBlogPage(locale);
 
   return {
     title: `${content.title} - Celo Reis`,

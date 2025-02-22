@@ -3,13 +3,15 @@ import Topbar from "@/components/Topbar";
 import { LocaleType } from "@/utils/constants";
 import { LocalizedStringProvider } from "react-aria-components/i18n";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: LocaleType };
+  params: Promise<{ locale: LocaleType }>;
 }) {
+  const { locale } = await params;
+
   return (
     <html className="dark" lang={locale}>
       <body className="pt-16 bg-slate-50 text-zinc-900 dark:bg-zinc-900 dark:text-slate-100 min-h-screen">

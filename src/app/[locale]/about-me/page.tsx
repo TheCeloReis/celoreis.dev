@@ -11,13 +11,15 @@ import { Metadata } from "next";
 dayjs.extend(relativeTime);
 
 type AboutMePageProps = {
-  params: {
+  params: Promise<{
     locale: LocaleType;
-  };
+  }>;
 };
 
-const HomePage: React.FC<AboutMePageProps> = (props) => {
-  const content = getAboutMePage(props.params.locale);
+const HomePage: React.FC<AboutMePageProps> = async ({ params }) => {
+  const { locale } = await params;
+
+  const content = getAboutMePage(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24">
@@ -39,7 +41,7 @@ const HomePage: React.FC<AboutMePageProps> = (props) => {
         </div>
       </div>
 
-      <Experiences locale={props.params.locale} />
+      <Experiences locale={locale} />
     </div>
   );
 };
@@ -48,8 +50,12 @@ export const generateStaticParams = async () => {
   return LOCALES.map((locale) => ({ locale }));
 };
 
-export const generateMetadata = ({ params }: AboutMePageProps): Metadata => {
-  const content = getAboutMePage(params.locale);
+export const generateMetadata = async ({
+  params,
+}: AboutMePageProps): Promise<Metadata> => {
+  const { locale } = await params;
+
+  const content = getAboutMePage(locale);
 
   return {
     title: `${content.title} - Celo Reis`,
