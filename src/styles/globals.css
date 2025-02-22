@@ -13,6 +13,10 @@
   --foreground: #ededed;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
