@@ -2,9 +2,9 @@
 import React from "react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import Markdown from "react-markdown";
 import { LocaleType } from "@/utils/constants";
 import { getExperiences } from "@/cms/experiences";
+import Markdown from "../Markdown";
 
 dayjs.extend(relativeTime);
 
@@ -58,7 +58,9 @@ const Experiences: React.FC<ExperiencesProps> = (props) => {
             </header>
 
             <div className="ml-6 pl-10 border-l border-primary-400 pt-4">
-              <Markdown>{experience.description}</Markdown>
+              <div className="prose dark:prose-invert">
+                <Markdown>{experience.description}</Markdown>
+              </div>
 
               <ul className="flex gap-2 mt-3 w-full overflow-hidden flex-wrap">
                 {experience.skills.split(",").map((skill, index) => (

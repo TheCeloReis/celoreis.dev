@@ -6,17 +6,19 @@ import { getBlogPage } from "@/cms/pages";
 import { getAllPosts } from "@/cms/blog";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { Metadata } from "next";
 
 type BlogPageProps = {
-  params: {
+  params: Promise<{
     locale: LocaleType;
-  };
+  }>;
 };
 
-const BlogPage: React.FC<BlogPageProps> = (props) => {
-  const content = getBlogPage(props.params.locale);
+const BlogPage: React.FC<BlogPageProps> = async ({ params }) => {
+  const { locale } = await params;
 
-  const posts = getAllPosts(props.params.locale);
+  const content = getBlogPage(locale);
+  const posts = getAllPosts(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24">
@@ -24,10 +26,10 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
         {content.title}
       </h1>
 
-      <div>
+      <div className="prose dark:prose-invert lg:prose-lg mx-auto">
         <Markdown>{content.intro}</Markdown>
 
-        <hr className="w-2/3 ml-auto mt-4 border-primary-400" />
+        <hr className="w-2/3 ml-auto -mt-2 border-primary-400" />
       </div>
 
       <div className="flex flex-col gap-8 mt-12 mb-16">
@@ -36,10 +38,7 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
             key={index}
             className="border border-zinc-400 dark:border-zinc-800 hover:border-primary-400 transition-colors rounded-2xl overflow-hidden"
           >
-            <Link
-              className="block p-4"
-              href={`/${props.params.locale}/blog/${post.slug}`}
-            >
+            <Link className="block p-4" href={`/${locale}/blog/${post.slug}`}>
               <p className="text-zinc-800 dark:text-zinc-400 text-sm mb-1">
                 {dayjs(post.date).format("DD MMMM, YYYY")}
               </p>
@@ -59,6 +58,19 @@ const BlogPage: React.FC<BlogPageProps> = (props) => {
 
 export const generateStaticParams = async () => {
   return LOCALES.map((locale) => ({ locale }));
+};
+
+export const generateMetadata = async ({
+  params,
+}: BlogPageProps): Promise<Metadata> => {
+  const { locale } = await params;
+
+  const content = getBlogPage(locale);
+
+  return {
+    title: `${content.title} - Celo Reis`,
+    description: `${content.description}`,
+  };
 };
 
 export default BlogPage;

@@ -10,23 +10,16 @@ import { Metadata } from "next";
 
 dayjs.extend(relativeTime);
 
-export const generateMetadata = ({ params }: AboutMePageProps): Metadata => {
-  const content = getAboutMePage(params.locale);
-
-  return {
-    title: `${content.title} - Celo Reis`,
-    description: `${content.description}`,
-  };
-};
-
 type AboutMePageProps = {
-  params: {
+  params: Promise<{
     locale: LocaleType;
-  };
+  }>;
 };
 
-const HomePage: React.FC<AboutMePageProps> = (props) => {
-  const content = getAboutMePage(props.params.locale);
+const HomePage: React.FC<AboutMePageProps> = async ({ params }) => {
+  const { locale } = await params;
+
+  const content = getAboutMePage(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24">
@@ -41,20 +34,33 @@ const HomePage: React.FC<AboutMePageProps> = (props) => {
           className="w-40 h-40 rounded-full my-4 bg-primary-500 border-4 border-primary-600"
         />
 
-        <div>
+        <div className="prose dark:prose-invert">
           <Markdown>{content.intro}</Markdown>
 
           <hr className="w-2/3 ml-auto mt-4 border-primary-400" />
         </div>
       </div>
 
-      <Experiences locale={props.params.locale} />
+      <Experiences locale={locale} />
     </div>
   );
 };
 
 export const generateStaticParams = async () => {
   return LOCALES.map((locale) => ({ locale }));
+};
+
+export const generateMetadata = async ({
+  params,
+}: AboutMePageProps): Promise<Metadata> => {
+  const { locale } = await params;
+
+  const content = getAboutMePage(locale);
+
+  return {
+    title: `${content.title} - Celo Reis`,
+    description: `${content.description}`,
+  };
 };
 
 export default HomePage;
