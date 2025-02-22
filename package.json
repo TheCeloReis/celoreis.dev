@@ -20,7 +20,8 @@
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
     "react-markdown": "^8.0.7",
-    "tailwind-merge": "^2.5.3",
+    "tailwind": "^4.0.0",
+    "tailwind-merge": "^3.0.1",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
