@@ -26,10 +26,10 @@ const BlogPage: React.FC<BlogPageProps> = async ({ params }) => {
         {content.title}
       </h1>
 
-      <div>
+      <div className="prose dark:prose-invert lg:prose-lg mx-auto">
         <Markdown>{content.intro}</Markdown>
 
-        <hr className="w-2/3 ml-auto mt-4 border-primary-400" />
+        <hr className="w-2/3 ml-auto -mt-2 border-primary-400" />
       </div>
 
       <div className="flex flex-col gap-8 mt-12 mb-16">

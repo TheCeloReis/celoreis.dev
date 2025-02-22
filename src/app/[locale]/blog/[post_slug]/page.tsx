@@ -21,8 +21,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
   }
 
   return (
-    <div>
-      <div className="max-w-4xl mx-auto px-4 pb-10">
+    <div className="">
+      <div className="max-w-4xl mx-auto px-4 pb-10 prose dark:prose-invert lg:prose-lg">
         <header className="mb-8">
           <h1 className="text-4xl font-bold mt-10 mb-2">{post.title}</h1>
 

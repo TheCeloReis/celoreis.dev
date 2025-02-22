@@ -34,7 +34,7 @@ const HomePage: React.FC<AboutMePageProps> = async ({ params }) => {
           className="w-40 h-40 rounded-full my-4 bg-primary-500 border-4 border-primary-600"
         />
 
-        <div>
+        <div className="prose dark:prose-invert">
           <Markdown>{content.intro}</Markdown>
 
           <hr className="w-2/3 ml-auto mt-4 border-primary-400" />
