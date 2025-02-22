@@ -20,14 +20,22 @@ const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
     return null;
   }
 
+  console.log("post");
+
   return (
     <div className="">
       <div className="max-w-4xl mx-auto px-4 pb-10 prose dark:prose-invert lg:prose-lg">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold mt-10 mb-2">{post.title}</h1>
+          <img
+            className="!-mt-2 !mb-16 w-full object-cover rounded-b-3xl aspect-video"
+            src={post.thumbnail}
+            alt=""
+          />
+
+          <h1 className="text-4xl font-bold mt-10">{post.title}</h1>
 
           <p className="text-zinc-800 dark:text-zinc-400">
-            {dayjs(post.date).format("MMMM D, YYYY")}
+            {dayjs(post.date).format("MMMM D, YYYY")} ◦ {post.readingTime}
           </p>
         </header>
 

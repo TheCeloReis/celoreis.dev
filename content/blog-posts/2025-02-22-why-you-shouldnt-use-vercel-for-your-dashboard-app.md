@@ -3,12 +3,14 @@ en:
   seo:
     title: Why you shouldn't use Vercel for your dashboard app
     description: Why you shouldn't use Vercel for your dashboard app
-    image: /images/uploads/og_image.png
+    image: ""
   body: >
-    # Why Next.js Might Not Be Ideal for Pure CSR Apps
-
-
-    *Next.js* is a powerful React framework, widely celebrated for its **server-side rendering (SSR)** and **static site generation (SSG)** capabilities. However, when it comes to **client-side rendered (CSR)** applications, Next.js can introduce unnecessary complexity and overhead. Below is an in-depth look at why Next.js might not be the best choice for pure CSR projects.
+    *Next.js* is a powerful React framework, widely celebrated for its
+    **server-side rendering (SSR)** and **static site generation (SSG)**
+    capabilities. However, when it comes to **client-side rendered (CSR)**
+    applications, Next.js can introduce unnecessary complexity and overhead.
+    Below is an in-depth look at why Next.js might not be the best choice for
+    pure CSR projects.
 
 
     ---
@@ -58,9 +60,13 @@ en:
       Next.js comes with built-in SSR support, which is an extra layer if your application doesn't require server-rendered pages.
 
 
+
+
       
     - **Larger Bundle Sizes**:  
       Bundles may include SSR-related code that is never utilized, potentially increasing load times.
+
+
 
 
       
@@ -74,6 +80,8 @@ en:
       Although Next.js handles hydration for SSR, in a CSR context this can introduce redundant processing steps.
 
 
+
+
       
     - **Delayed Interactivity**:  
       Extra abstractions may delay the point at which your app becomes interactive compared to more streamlined CSR tools.
@@ -83,6 +91,8 @@ en:
 
     - **File-Based Routing Constraints**:  
       Next.js enforces a file-based routing system which might not offer the flexibility required for highly dynamic CSR apps.
+
+
 
 
       
@@ -132,19 +142,19 @@ en:
 
     export default HomePage;
   title: Why you shouldn't use Vercel for your dashboard app
-  thumbnail: /images/uploads/og_image.png
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242458/cld-sample-2.jpg
   date: 2025-02-22T11:29:00.000Z
   tags: react,next,vercel
 pt:
   seo:
-    image: /images/uploads/og_image.png
-  thumbnail: /images/uploads/og_image.png
+    image: ""
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242458/cld-sample-2.jpg
   date: 2025-02-22T11:29:00.000Z
   tags: react,next,vercel
 es:
   seo:
-    image: /images/uploads/og_image.png
-  thumbnail: /images/uploads/og_image.png
+    image: ""
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242458/cld-sample-2.jpg
   date: 2025-02-22T11:29:00.000Z
   tags: react,next,vercel
 ---

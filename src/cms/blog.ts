@@ -1,8 +1,10 @@
 import { LOCALES, LocaleType } from "@/utils/constants";
+
 import fs from "fs";
 import path from "path";
 import fm from "front-matter";
 import dayjs from "dayjs";
+import { readingTime } from "@/utils/readingTime";
 
 const BLOG_DIRECTORY = path.join(process.cwd(), "./content/blog-posts");
 
@@ -10,16 +12,19 @@ type BlogPost = {
   seo: {
     title: string;
     description: string;
-    image: string;
+    image?: string;
   };
   title: string;
   body: string;
   date: string;
   tags: string;
   slug: string;
+  thumbnail: string;
+
+  readingTime: string;
 };
 
-export const getAllPosts = (locale: LocaleType) => {
+export const getAllPosts = (locale: LocaleType): BlogPost[] => {
   const fileNames = fs
     .readdirSync(BLOG_DIRECTORY)
     .filter((file) => file.endsWith(".md"));
@@ -42,7 +47,10 @@ export const getAllPosts = (locale: LocaleType) => {
   });
 };
 
-export const getPostBySlug = (slug: string, locale: LocaleType) => {
+export const getPostBySlug = (
+  slug: string,
+  locale: LocaleType,
+): BlogPost | null => {
   const fileNames = fs
     .readdirSync(BLOG_DIRECTORY)
     .filter((file) => file.endsWith(".md"));
@@ -60,6 +68,7 @@ export const getPostBySlug = (slug: string, locale: LocaleType) => {
   return {
     ...post,
     slug: file.substring(11).replace(".md", ""),
+    readingTime: readingTime(post.body, locale),
   };
 };
 

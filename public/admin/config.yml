@@ -4,7 +4,17 @@ backend:
   name: git-gateway
   branch: reboot # Branch to update (optional; defaults to master)
 
-media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dr0fyonps
+    api_key: 391471164493191
+    default_transformations:
+      - - fetch_format: auto
+          width: 800
+          quality: auto
+          crop: scale
+
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 i18n:
@@ -135,6 +145,7 @@ collections:
                 name: "image",
                 widget: "image",
                 i18n: "duplicate",
+                required: false,
               },
             ],
         }

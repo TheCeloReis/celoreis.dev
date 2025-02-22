@@ -21,6 +21,7 @@
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
     "react-markdown": "^10.0.0",
+    "reading-time": "^1.5.0",
     "rehype-highlight": "^7.0.2",
     "rehype-highlight-code-lines": "^1.1.2",
     "remark": "^15.0.1",

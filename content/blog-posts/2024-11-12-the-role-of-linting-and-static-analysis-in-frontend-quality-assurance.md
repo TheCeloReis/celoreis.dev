@@ -81,7 +81,7 @@ en:
       collaboration for maintainable code.
     title: The Role of Linting and Static Analysis in Frontend Quality Assurance
     image: /images/uploads/og_image.png
-  date: 2024-10-12T19:51:00.000Z
+  date: 2024-11-12T19:51:00.000Z
 pt:
   tags:
     linting, análise estática, ESLint, Stylelint, Prettier, qualidade de código, QA,
@@ -157,7 +157,7 @@ pt:
       colaboração da equipe para um código sustentável.
     title: O Papel do Linting e da Análise Estática na Garantia de Qualidade Frontend
     image: /images/uploads/og_image.png
-  date: 2024-10-12T19:51:00.000Z
+  date: 2024-11-12T19:51:00.000Z
 es:
   tags:
     linting, análisis estático, ESLint, Stylelint, Prettier, calidad de código, QA,
@@ -233,5 +233,5 @@ es:
       colaboración del equipo para un código sostenible.
     title: El Papel del Linting y el Análisis Estático en la Garantía de Calidad Frontend
     image: /images/uploads/og_image.png
-  date: 2024-10-12T19:51:00.000Z
+  date: 2024-11-12T19:51:00.000Z
 ---
