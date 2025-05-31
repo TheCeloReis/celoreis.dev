@@ -1,7 +1,13 @@
 ---
 en:
   body: >-
-    In the dynamic and highly demanding domain of software development, achieving enduring code quality is a persistent challenge. One approach that has garnered significant attention for its efficacy in delivering reliable and maintainable software is Test-Driven Development (TDD). Though traditionally more prevalent in backend systems, TDD has also demonstrated substantial utility in frontend development, offering a variety of benefits that enhance both code quality and overall system stability.
+    In the dynamic and highly demanding domain of software development,
+    achieving enduring code quality is a persistent challenge. One approach that
+    has garnered significant attention for its efficacy in delivering reliable
+    and maintainable software is Test-Driven Development (TDD). Though
+    traditionally more prevalent in backend systems, TDD has also demonstrated
+    substantial utility in frontend development, offering a variety of benefits
+    that enhance both code quality and overall system stability.
 
 
     ## What is Test-Driven Development (TDD)?
@@ -83,22 +89,28 @@ en:
   seo:
     title: The Role of Test-Driven Development (TDD) in Enhancing Code Quality
     description: >
-      Learn how Test-Driven Development (TDD) enhances code quality by
-      fostering modular design, reducing defects, and clarifying requirements in
-      frontend development.
-    image: /images/uploads/og_image.png
-  thumbnail: /images/uploads/og_image.png
+      Learn how Test-Driven Development (TDD) enhances code quality by fostering
+      modular design, reducing defects, and clarifying requirements in frontend
+      development.
+    image: ""
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242457/samples/coffee.jpg
   date: 2024-10-13T20:13:00.000Z
   tags: Test-Driven Development (TDD), Code quality, Frontend development,
     Software testing, Red-Green-Refactor, Modular design, Automated testing,
     Jest, Cypress, Software reliability
 pt:
-  tags:
-    Desenvolvimento Orientado a Testes (TDD), Qualidade de código, Desenvolvimento frontend,
-    Teste de software, Red-Green-Refactor, Design modular, Teste automatizado,
-    Jest, Cypress, Confiabilidade de software
+  tags: Desenvolvimento Orientado a Testes (TDD), Qualidade de código,
+    Desenvolvimento frontend, Teste de software, Red-Green-Refactor, Design
+    modular, Teste automatizado, Jest, Cypress, Confiabilidade de software
   body: >-
-    No dinâmico e altamente exigente domínio do desenvolvimento de software, alcançar uma qualidade de código duradoura é um desafio persistente. Uma abordagem que tem atraído atenção significativa por sua eficácia em fornecer software confiável e sustentável é o Desenvolvimento Orientado a Testes (TDD). Embora tradicionalmente mais prevalente em sistemas backend, o TDD também demonstrou utilidade substancial no desenvolvimento frontend, oferecendo uma variedade de benefícios que aprimoram tanto a qualidade do código quanto a estabilidade geral do sistema.
+    No dinâmico e altamente exigente domínio do desenvolvimento de software,
+    alcançar uma qualidade de código duradoura é um desafio persistente. Uma
+    abordagem que tem atraído atenção significativa por sua eficácia em fornecer
+    software confiável e sustentável é o Desenvolvimento Orientado a Testes
+    (TDD). Embora tradicionalmente mais prevalente em sistemas backend, o TDD
+    também demonstrou utilidade substancial no desenvolvimento frontend,
+    oferecendo uma variedade de benefícios que aprimoram tanto a qualidade do
+    código quanto a estabilidade geral do sistema.
 
 
     ## O Que é Desenvolvimento Orientado a Testes (TDD)?
@@ -176,23 +188,31 @@ pt:
 
 
     Para desenvolvedores que se esforçam para elevar a qualidade de seus projetos frontend, abraçar o TDD é um esforço que vale a pena. O investimento inicial em aprender e aplicar o TDD provavelmente resultará em melhorias substanciais tanto na produtividade quanto na robustez do software ao longo do tempo.
-  title: O Papel do Desenvolvimento Orientado a Testes (TDD) na Melhoria da Qualidade do Código
+  title: O Papel do Desenvolvimento Orientado a Testes (TDD) na Melhoria da
+    Qualidade do Código
   seo:
-    title: O Papel do Desenvolvimento Orientado a Testes (TDD) na Melhoria da Qualidade do Código
+    title: O Papel do Desenvolvimento Orientado a Testes (TDD) na Melhoria da
+      Qualidade do Código
     description: >
-      Aprenda como o Desenvolvimento Orientado a Testes (TDD) aprimora a qualidade do código
-      ao fomentar design modular, reduzir defeitos e esclarecer requisitos no
-      desenvolvimento frontend.
-    image: /images/uploads/og_image.png
-  thumbnail: /images/uploads/og_image.png
+      Aprenda como o Desenvolvimento Orientado a Testes (TDD) aprimora a
+      qualidade do código ao fomentar design modular, reduzir defeitos e
+      esclarecer requisitos no desenvolvimento frontend.
+    image: ""
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242457/samples/coffee.jpg
   date: 2024-10-13T20:13:00.000Z
 es:
-  tags:
-    Desarrollo Guiado por Pruebas (TDD), Calidad de código, Desarrollo frontend,
-    Pruebas de software, Red-Green-Refactor, Diseño modular, Pruebas automatizadas,
-    Jest, Cypress, Confiabilidad del software
+  tags: Desarrollo Guiado por Pruebas (TDD), Calidad de código, Desarrollo
+    frontend, Pruebas de software, Red-Green-Refactor, Diseño modular, Pruebas
+    automatizadas, Jest, Cypress, Confiabilidad del software
   body: >-
-    En el dinámico y altamente exigente ámbito del desarrollo de software, lograr una calidad de código duradera es un desafío constante. Un enfoque que ha atraído una atención significativa por su eficacia para entregar software confiable y mantenible es el Desarrollo Guiado por Pruebas (TDD). Aunque tradicionalmente más prevalente en sistemas backend, el TDD también ha demostrado una utilidad sustancial en el desarrollo frontend, ofreciendo una variedad de beneficios que mejoran tanto la calidad del código como la estabilidad general del sistema.
+    En el dinámico y altamente exigente ámbito del desarrollo de software,
+    lograr una calidad de código duradera es un desafío constante. Un enfoque
+    que ha atraído una atención significativa por su eficacia para entregar
+    software confiable y mantenible es el Desarrollo Guiado por Pruebas (TDD).
+    Aunque tradicionalmente más prevalente en sistemas backend, el TDD también
+    ha demostrado una utilidad sustancial en el desarrollo frontend, ofreciendo
+    una variedad de beneficios que mejoran tanto la calidad del código como la
+    estabilidad general del sistema.
 
 
     ## ¿Qué es el Desarrollo Guiado por Pruebas (TDD)?
@@ -270,14 +290,16 @@ es:
 
 
     Para los desarrolladores que se esfuerzan por elevar la calidad de sus proyectos frontend, adoptar el TDD es un esfuerzo que vale la pena. La inversión inicial en aprender y aplicar el TDD probablemente resultará en mejoras sustanciales tanto en productividad como en robustez del software con el tiempo.
-  title: El Papel del Desarrollo Guiado por Pruebas (TDD) en la Mejora de la Calidad del Código
+  title: El Papel del Desarrollo Guiado por Pruebas (TDD) en la Mejora de la
+    Calidad del Código
   seo:
-    title: El Papel del Desarrollo Guiado por Pruebas (TDD) en la Mejora de la Calidad del Código
+    title: El Papel del Desarrollo Guiado por Pruebas (TDD) en la Mejora de la
+      Calidad del Código
     description: >
-      Aprende cómo el Desarrollo Guiado por Pruebas (TDD) mejora la calidad del código
-      al fomentar el diseño modular, reducir defectos y clarificar requisitos en
-      el desarrollo frontend.
-    image: /images/uploads/og_image.png
-  thumbnail: /images/uploads/og_image.png
+      Aprende cómo el Desarrollo Guiado por Pruebas (TDD) mejora la calidad del
+      código al fomentar el diseño modular, reducir defectos y clarificar
+      requisitos en el desarrollo frontend.
+    image: ""
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242457/samples/coffee.jpg
   date: 2024-10-13T20:13:00.000Z
 ---

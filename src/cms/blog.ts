@@ -39,6 +39,7 @@ export const getAllPosts = (locale: LocaleType): BlogPost[] => {
     return {
       ...content,
       slug: fileNames[index].substring(11).replace(".md", ""),
+      readingTime: readingTime(content.body, locale),
     };
   });
 

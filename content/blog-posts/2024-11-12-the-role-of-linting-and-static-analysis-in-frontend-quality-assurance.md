@@ -73,21 +73,29 @@ en:
 
     Incorporating linting and static analysis into your development process not only improves code quality but also contributes to a more harmonious and efficient team environment. The advantages of fewer errors, consistent styles, and streamlined code reviews translate directly into higher-quality software that is easier to maintain and scale. A well-maintained codebase is crucial for delivering reliable features and keeping end-users satisfied, which is ultimately the goal of any development team.
   title: The Role of Linting and Static Analysis in Frontend Quality Assurance
-  thumbnail: /images/uploads/og_image.png
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242457/samples/cup-on-a-table.jpg
   seo:
-    description:
-      Explore how ESLint, Stylelint, and Prettier boost frontend quality
+    description: Explore how ESLint, Stylelint, and Prettier boost frontend quality
       by enforcing consistency, catching errors early, and streamlining team
       collaboration for maintainable code.
     title: The Role of Linting and Static Analysis in Frontend Quality Assurance
-    image: /images/uploads/og_image.png
+    image: ""
   date: 2024-11-12T19:51:00.000Z
 pt:
-  tags:
-    linting, análise estática, ESLint, Stylelint, Prettier, qualidade de código, QA,
-    padrões de codificação, JavaScript, CSS, ferramentas para desenvolvedores
+  tags: linting, análise estática, ESLint, Stylelint, Prettier, qualidade de
+    código, QA, padrões de codificação, JavaScript, CSS, ferramentas para
+    desenvolvedores
   body: >-
-    Garantia de qualidade no desenvolvimento frontend não se trata apenas de testar se as coisas funcionam—ela começa no nível do código, garantindo consistência, legibilidade e manutenibilidade. Linting e análise estática são ferramentas essenciais que ajudam a alcançar esses objetivos. Elas detectam erros precocemente, aplicam padrões de codificação e tornam a colaboração da equipe muito mais eficiente. Ao aproveitar essas ferramentas, os desenvolvedores podem melhorar significativamente a qualidade do código, resultando em um projeto coeso e bem mantido. Este post discutirá os papéis de ferramentas como Stylelint, ESLint e Prettier, e como elas ajudam a criar uma estratégia confiável de garantia de qualidade frontend.
+    Garantia de qualidade no desenvolvimento frontend não se trata apenas de
+    testar se as coisas funcionam—ela começa no nível do código, garantindo
+    consistência, legibilidade e manutenibilidade. Linting e análise estática
+    são ferramentas essenciais que ajudam a alcançar esses objetivos. Elas
+    detectam erros precocemente, aplicam padrões de codificação e tornam a
+    colaboração da equipe muito mais eficiente. Ao aproveitar essas ferramentas,
+    os desenvolvedores podem melhorar significativamente a qualidade do código,
+    resultando em um projeto coeso e bem mantido. Este post discutirá os papéis
+    de ferramentas como Stylelint, ESLint e Prettier, e como elas ajudam a criar
+    uma estratégia confiável de garantia de qualidade frontend.
 
 
     ## Por Que Linting e Análise Estática São Importantes
@@ -149,21 +157,30 @@ pt:
 
     Incorporar linting e análise estática em seu processo de desenvolvimento não apenas melhora a qualidade do código, mas também contribui para um ambiente de equipe mais harmonioso e eficiente. As vantagens de menos erros, estilos consistentes e revisões de código simplificadas se traduzem diretamente em um software de maior qualidade que é mais fácil de manter e escalar. Uma base de código bem mantida é crucial para entregar funcionalidades confiáveis e manter os usuários finais satisfeitos, que é, em última análise, o objetivo de qualquer equipe de desenvolvimento.
   title: O Papel do Linting e da Análise Estática na Garantia de Qualidade Frontend
-  thumbnail: /images/uploads/og_image.png
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242457/samples/cup-on-a-table.jpg
   seo:
-    description:
-      Explore como ESLint, Stylelint e Prettier aumentam a qualidade frontend
-      ao aplicar consistência, detectar erros precocemente e otimizar a
+    description: Explore como ESLint, Stylelint e Prettier aumentam a qualidade
+      frontend ao aplicar consistência, detectar erros precocemente e otimizar a
       colaboração da equipe para um código sustentável.
     title: O Papel do Linting e da Análise Estática na Garantia de Qualidade Frontend
-    image: /images/uploads/og_image.png
+    image: ""
   date: 2024-11-12T19:51:00.000Z
 es:
-  tags:
-    linting, análisis estático, ESLint, Stylelint, Prettier, calidad de código, QA,
-    estándares de codificación, JavaScript, CSS, herramientas para desarrolladores
+  tags: linting, análisis estático, ESLint, Stylelint, Prettier, calidad de
+    código, QA, estándares de codificación, JavaScript, CSS, herramientas para
+    desarrolladores
   body: >-
-    La garantía de calidad en el desarrollo frontend no se trata solo de probar si las cosas funcionan—comienza a nivel de código, asegurando consistencia, legibilidad y mantenibilidad. El linting y el análisis estático son herramientas esenciales que ayudan a lograr estos objetivos. Detectan errores tempranamente, aplican estándares de codificación y hacen que la colaboración en equipo sea mucho más eficiente. Al aprovechar estas herramientas, los desarrolladores pueden mejorar significativamente la calidad del código, resultando en un proyecto cohesivo y bien mantenido. Esta publicación discutirá los roles de herramientas como Stylelint, ESLint y Prettier, y cómo ayudan a crear una estrategia confiable de garantía de calidad frontend.
+    La garantía de calidad en el desarrollo frontend no se trata solo de probar
+    si las cosas funcionan—comienza a nivel de código, asegurando consistencia,
+    legibilidad y mantenibilidad. El linting y el análisis estático son
+    herramientas esenciales que ayudan a lograr estos objetivos. Detectan
+    errores tempranamente, aplican estándares de codificación y hacen que la
+    colaboración en equipo sea mucho más eficiente. Al aprovechar estas
+    herramientas, los desarrolladores pueden mejorar significativamente la
+    calidad del código, resultando en un proyecto cohesivo y bien mantenido.
+    Esta publicación discutirá los roles de herramientas como Stylelint, ESLint
+    y Prettier, y cómo ayudan a crear una estrategia confiable de garantía de
+    calidad frontend.
 
 
     ## Por Qué Importan el Linting y el Análisis Estático
@@ -224,14 +241,15 @@ es:
 
 
     Incorporar linting y análisis estático en tu proceso de desarrollo no solo mejora la calidad del código, sino que también contribuye a un entorno de equipo más armonioso y eficiente. Las ventajas de menos errores, estilos consistentes y revisiones de código simplificadas se traducen directamente en un software de mayor calidad que es más fácil de mantener y escalar. Una base de código bien mantenida es crucial para entregar funcionalidades confiables y mantener satisfechos a los usuarios finales, que es, en última instancia, el objetivo de cualquier equipo de desarrollo.
-  title: El Papel del Linting y el Análisis Estático en la Garantía de Calidad Frontend
-  thumbnail: /images/uploads/og_image.png
+  title: El Papel del Linting y el Análisis Estático en la Garantía de Calidad
+    Frontend
+  thumbnail: https://res.cloudinary.com/dr0fyonps/image/upload/c_scale,f_auto,q_auto,w_800/v1740242457/samples/cup-on-a-table.jpg
   seo:
-    description:
-      Explora cómo ESLint, Stylelint y Prettier mejoran la calidad frontend
-      al aplicar consistencia, detectar errores tempranamente y optimizar la
-      colaboración del equipo para un código sostenible.
-    title: El Papel del Linting y el Análisis Estático en la Garantía de Calidad Frontend
-    image: /images/uploads/og_image.png
+    description: Explora cómo ESLint, Stylelint y Prettier mejoran la calidad
+      frontend al aplicar consistencia, detectar errores tempranamente y
+      optimizar la colaboración del equipo para un código sostenible.
+    title: El Papel del Linting y el Análisis Estático en la Garantía de Calidad
+      Frontend
+    image: ""
   date: 2024-11-12T19:51:00.000Z
 ---
