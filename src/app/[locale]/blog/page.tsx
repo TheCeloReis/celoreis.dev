@@ -38,16 +38,25 @@ const BlogPage: React.FC<BlogPageProps> = async ({ params }) => {
             key={index}
             className="border border-zinc-400 dark:border-zinc-800 hover:border-primary-400 transition-colors rounded-2xl overflow-hidden"
           >
-            <Link className="block p-4" href={`/${locale}/blog/${post.slug}`}>
-              <p className="text-zinc-800 dark:text-zinc-400 text-sm mb-1">
-                {dayjs(post.date).format("DD MMMM, YYYY")}
-              </p>
+            <Link className="p-4 flex" href={`/${locale}/blog/${post.slug}`}>
+              <img
+                src={post.thumbnail}
+                alt=""
+                className="h-40 aspect-[3/4] object-cover mr-4 rounded-lg"
+              />
 
-              <h2 className="text-2xl text-zinc-900 dark:text-white mb-3 font-bold">
-                {post.title}
-              </h2>
+              <div>
+                <p className="text-zinc-800 dark:text-zinc-400 text-xs mb-1.5">
+                  {dayjs(post.date).format("DD MMMM, YYYY")} ◦{" "}
+                  {post.readingTime}
+                </p>
 
-              <p>{post.seo.description}</p>
+                <h2 className="text-2xl text-zinc-900 dark:text-white mb-3 font-bold">
+                  {post.title}
+                </h2>
+
+                <p className="text-sm">{post.seo.description}</p>
+              </div>
             </Link>
           </div>
         ))}

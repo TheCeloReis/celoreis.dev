@@ -20,8 +20,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
     return null;
   }
 
-  console.log("post");
-
   return (
     <div className="">
       <div className="max-w-4xl mx-auto px-4 pb-10 prose dark:prose-invert lg:prose-lg">
