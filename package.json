@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@react-aria/optimize-locales-plugin": "^1.1.2",
+    "@theceloreis/chat-widget": "^1.0.0",
     "dayjs": "^1.11.13",
     "highlight.js": "^11.11.1",
     "next": "^15.1.7",

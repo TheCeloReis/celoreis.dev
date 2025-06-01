@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Markdown from "react-markdown";
 import dayjs from "dayjs";
@@ -7,6 +6,7 @@ import Experiences from "@/components/templates/Experiences";
 import { LOCALES, LocaleType } from "@/utils/constants";
 import { getAboutMePage } from "@/cms/pages";
 import { Metadata } from "next";
+import ChatWidget from "@/components/ChatWidget";
 
 dayjs.extend(relativeTime);
 
@@ -23,6 +23,8 @@ const HomePage: React.FC<AboutMePageProps> = async ({ params }) => {
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24">
+      <ChatWidget />
+
       <h1 className="text-center text-5xl text-primary-500 dark:text-primary-400 mb-4">
         {content.title}
       </h1>
