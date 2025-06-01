@@ -7,6 +7,11 @@ import { Sun, Moon } from "react-feather";
 import { Kode_Mono } from "next/font/google";
 import cn from "@/utils/cn";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const ChatWidget = dynamic(() => import("@/components/ChatWidget"), {
+  ssr: false,
+});
 
 const kodeMono = Kode_Mono({
   weight: ["400", "700"],
@@ -46,6 +51,8 @@ const Topbar: React.FC<TopbarProps> = (props) => {
           <span>Reis</span>
         </h1>
       </Link>
+
+      <ChatWidget />
 
       <div className="flex items-center ml-auto space-x-4">
         <Link
