@@ -9,7 +9,7 @@ const ChatWidgetComponent = dynamic(
 
 const ChatWidget = () => (
   <ChatWidgetComponent
-    genAIAPIKey={process.env.NEXT_PUBLIC_GEN_AI_API_KEY}
+    genAIAPIKey={process.env.NEXT_PUBLIC_GEN_AI_API_KEY!}
     theme={{
       primaryColor: "#1d6681",
     }}
