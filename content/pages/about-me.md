@@ -1,36 +1,35 @@
 ---
 en:
   title: About me
-  intro: I'm a frontend software engineer turning caffeine into code and ideas
-    into sleek, user-friendly interfaces. With a passion for crafting responsive
-    designs and enhancing user experiences, I embrace agile methods to rapidly
-    evolve products. Proficient in React, TypeScript, and Next.js, I thrive in
-    cross-functional teams delivering impactful solutions. When not coding, I'm
-    probably negotiating with CSS about margins.
-  description: Experienced frontend software engineer skilled in React,
-    TypeScript, and Next.js. I create responsive, high-performance websites and
-    seamless user interfaces.
+  intro: Accomplished Senior Frontend Engineer with over 6 years of experience
+    architecting and building high-performance, user-centric web applications
+    across healthcare, SaaS, and education sectors. Proven leader in
+    implementing robust automated testing frameworks that enhance code stability
+    and product quality. A collaborative team player dedicated to translating
+    complex business requirements into elegant technical solutions.
+  description: Accomplished Senior Frontend Engineer with 6+ years of experience
+    building high-performance, user-centric web applications in SaaS,
+    healthcare, and education.
 pt:
   title: Sobre mim
-  intro: Sou um desenvolvedor frontend transformando cafeína em código e ideias
-    em interfaces elegantes e fáceis de usar. Com uma paixão por criar designs
-    responsivos e melhorar experiências do usuário, adoto métodos ágeis para
-    evoluir produtos rapidamente. Proficiente em React, TypeScript e Next.js,
-    prospero em equipes multifuncionais, entregando soluções impactantes.
-    Quando não estou programando, provavelmente estou negociando com o CSS sobre margens.
-  description: Desenvolvedor frontend experiente, habilidoso em React,
-    TypeScript e Next.js. Crio sites responsivos, de alto desempenho, e
-    interfaces de usuário perfeitas.
+  intro: Engenheiro de Frontend Sênior talentoso com mais de 6 anos de experiência
+    em arquitetura e construção de aplicações web de alto desempenho e centradas no usuário
+    nos setores de saúde, SaaS e educação. Líder comprovado na
+    implementação de estruturas robustas de testes automatizados que melhoram a estabilidade do código
+    e a qualidade do produto. Um jogador de equipe colaborativo dedicado a traduzir
+    requisitos de negócios complexos em soluções técnicas elegantes.
+  description: Engenheiro de Frontend Sênior talentoso com mais de 6 anos de experiência
+    na construção de aplicações web de alto desempenho e centradas no usuário em SaaS,
+    saúde e educação.
 es:
-  title: Sobre yo
-  intro: Soy un desarrollador frontend que convierte cafeína en código e ideas
-    en interfaces elegantes y fáciles de usar. Con una pasión por diseñar
-    interfaces responsivas y mejorar la experiencia del usuario, adopto
-    métodos ágiles para evolucionar rápidamente los productos. Competente en
-    React, TypeScript y Next.js, prospero en equipos multifuncionales
-    entregando soluciones impactantes. Cuando no estoy programando, probablemente
-    estoy negociando con CSS sobre los márgenes.
-  description: Desarrollador frontend con experiencia y habilidades en React,
-    TypeScript y Next.js. Creo sitios web responsivos, de alto rendimiento, e
-    interfaces de usuario fluidas.
+  title: Sobre mí
+  intro: Ingeniero Frontend Senior consumado con más de 6 años de experiencia
+    en la arquitectura y construcción de aplicaciones web de alto rendimiento y centradas en el usuario
+    en los sectores de la salud, SaaS y educación. Líder probado en la
+    implementación de marcos de pruebas automatizadas robustas que mejoran la estabilidad del código
+    y la calidad del producto. Un jugador de equipo colaborativo dedicado a traducir
+    requisitos comerciales complejos en soluciones técnicas elegantes.
+  description: Ingeniero Frontend Senior consumado con más de 6 años de experiencia
+    en la construcción de aplicaciones web de alto rendimiento y centradas en el usuario en SaaS,
+    salud y educación.
 ---
