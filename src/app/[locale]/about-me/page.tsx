@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Markdown from "react-markdown";
 import dayjs from "dayjs";
@@ -12,12 +11,13 @@ dayjs.extend(relativeTime);
 
 type AboutMePageProps = {
   params: Promise<{
-    locale: LocaleType;
+    locale: string;
   }>;
 };
 
 const HomePage: React.FC<AboutMePageProps> = async ({ params }) => {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as LocaleType;
 
   const content = getAboutMePage(locale);
 
@@ -53,7 +53,8 @@ export const generateStaticParams = async () => {
 export const generateMetadata = async ({
   params,
 }: AboutMePageProps): Promise<Metadata> => {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as LocaleType;
 
   const content = getAboutMePage(locale);
 

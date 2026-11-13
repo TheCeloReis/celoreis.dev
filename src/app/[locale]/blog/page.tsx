@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Markdown from "react-markdown";
 import { LOCALES, LocaleType } from "@/utils/constants";
@@ -10,12 +9,13 @@ import { Metadata } from "next";
 
 type BlogPageProps = {
   params: Promise<{
-    locale: LocaleType;
+    locale: string;
   }>;
 };
 
 const BlogPage: React.FC<BlogPageProps> = async ({ params }) => {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as LocaleType;
 
   const content = getBlogPage(locale);
   const posts = getAllPosts(locale);
@@ -72,7 +72,8 @@ export const generateStaticParams = async () => {
 export const generateMetadata = async ({
   params,
 }: BlogPageProps): Promise<Metadata> => {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as LocaleType;
 
   const content = getBlogPage(locale);
 

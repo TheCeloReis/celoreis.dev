@@ -2,7 +2,7 @@
 
 import { LocaleType } from "@/utils/constants";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   Button,
   Label,
@@ -38,6 +38,9 @@ type LanguageSelectorProps = {
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
   const ref = useRef<HTMLDivElement>(null);
+  const [popoverMaxWidth, setPopoverMaxWidth] = useState<number | string>(
+    "200px",
+  );
   const router = useRouter();
   const pathName = usePathname();
 
@@ -46,6 +49,11 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
       ref={ref}
       className="flex flex-col"
       selectedKey={props.currentLocale}
+      onOpenChange={(isOpen) => {
+        if (isOpen && ref.current) {
+          setPopoverMaxWidth(ref.current.clientWidth);
+        }
+      }}
       onSelectionChange={(key) => {
         router.replace(pathName.replace(props.currentLocale, key as string));
       }}
@@ -60,7 +68,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
       <Popover
         className="w-full"
         style={{
-          maxWidth: ref.current?.clientWidth ?? "200px",
+          maxWidth: popoverMaxWidth,
         }}
       >
         <ListBox className="bg-white dark:bg-zinc-800 p-2 rounded-md shadow-lg border border-zinc-300 dark:border-zinc-600 cursor-pointer">
