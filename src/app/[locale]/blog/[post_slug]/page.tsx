@@ -6,13 +6,14 @@ import React from "react";
 
 type BlogPostPageProps = {
   params: Promise<{
-    locale: LocaleType;
+    locale: string;
     post_slug: string;
   }>;
 };
 
 const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
-  const { locale, post_slug } = await params;
+  const { locale: rawLocale, post_slug } = await params;
+  const locale = rawLocale as LocaleType;
 
   const post = getPostBySlug(post_slug, locale);
 
@@ -44,7 +45,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
 };
 
 export const generateMetadata = async ({ params }: BlogPostPageProps) => {
-  const { locale, post_slug } = await params;
+  const { locale: rawLocale, post_slug } = await params;
+  const locale = rawLocale as LocaleType;
 
   const post = getPostBySlug(post_slug, locale);
 

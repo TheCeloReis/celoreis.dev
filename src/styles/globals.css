@@ -2,15 +2,15 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #18181b;
 
   --color-primary-500-rgb: 30, 157, 188;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #18181b;
+  --foreground: #f4f4f5;
 }
 
 html {
@@ -20,7 +20,20 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background-color: rgba(var(--color-primary-500-rgb), 0.25);
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.dark :focus-visible {
+  outline-color: var(--color-primary-400);
 }
 
 @layer utilities {
@@ -31,8 +44,13 @@ body {
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme inline {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular,
+    monospace;
+}
+
 @theme {
-  --default-font-family: Roboto, sans-serif;
 
   --color-primary-50: #eefbfd;
   --color-primary-100: #d5f3f8;
