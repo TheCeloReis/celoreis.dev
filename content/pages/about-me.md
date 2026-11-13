@@ -1,35 +1,36 @@
 ---
 en:
-  title: About me
-  intro: Accomplished Senior Frontend Engineer with over 6 years of experience
-    architecting and building high-performance, user-centric web applications
-    across healthcare, SaaS, and education sectors. Proven leader in
-    implementing robust automated testing frameworks that enhance code stability
-    and product quality. A collaborative team player dedicated to translating
-    complex business requirements into elegant technical solutions.
-  description: Accomplished Senior Frontend Engineer with 6+ years of experience
-    building high-performance, user-centric web applications in SaaS,
-    healthcare, and education.
+  title: Senior Frontend Engineer — Architecture, Performance & Quality Engineering
+  intro: >-
+    I'm Celo Reis. Over the past 6+ years, I've architected and shipped fast,
+    user-centric web applications across healthcare, SaaS, and education. I
+    focus on frontend architecture, Core Web Vitals, automated testing, and
+    static analysis so teams can ship reliably without sacrificing developer
+    experience.
+  description: >-
+    Senior Frontend Engineer (6+ years) focused on frontend architecture,
+    performance, and quality engineering across healthcare, SaaS, and
+    education.
 pt:
-  title: Sobre mim
-  intro: Engenheiro de Frontend Sênior talentoso com mais de 6 anos de experiência
-    em arquitetura e construção de aplicações web de alto desempenho e centradas no usuário
-    nos setores de saúde, SaaS e educação. Líder comprovado na
-    implementação de estruturas robustas de testes automatizados que melhoram a estabilidade do código
-    e a qualidade do produto. Um jogador de equipe colaborativo dedicado a traduzir
-    requisitos de negócios complexos em soluções técnicas elegantes.
-  description: Engenheiro de Frontend Sênior talentoso com mais de 6 anos de experiência
-    na construção de aplicações web de alto desempenho e centradas no usuário em SaaS,
-    saúde e educação.
+  title: Engenheiro Frontend Sênior — Arquitetura, Performance & Engenharia de Qualidade
+  intro: >-
+    Sou Celo Reis. Nos últimos 6+ anos, arquitetei e entreguei aplicações web
+    rápidas e centradas no usuário nos setores de saúde, SaaS e educação. Foco
+    em arquitetura frontend, Core Web Vitals, testes automatizados e análise
+    estática para que times entreguem com confiabilidade sem abrir mão da
+    experiência de desenvolvimento.
+  description: >-
+    Engenheiro Frontend Sênior (6+ anos) focado em arquitetura frontend,
+    performance e engenharia de qualidade em saúde, SaaS e educação.
 es:
-  title: Sobre mí
-  intro: Ingeniero Frontend Senior consumado con más de 6 años de experiencia
-    en la arquitectura y construcción de aplicaciones web de alto rendimiento y centradas en el usuario
-    en los sectores de la salud, SaaS y educación. Líder probado en la
-    implementación de marcos de pruebas automatizadas robustas que mejoran la estabilidad del código
-    y la calidad del producto. Un jugador de equipo colaborativo dedicado a traducir
-    requisitos comerciales complejos en soluciones técnicas elegantes.
-  description: Ingeniero Frontend Senior consumado con más de 6 años de experiencia
-    en la construcción de aplicaciones web de alto rendimiento y centradas en el usuario en SaaS,
-    salud y educación.
+  title: Ingeniero Frontend Senior — Arquitectura, Rendimiento e Ingeniería de Calidad
+  intro: >-
+    Soy Celo Reis. En los últimos 6+ años, he diseñado y entregado aplicaciones
+    web rápidas y centradas en el usuario en los sectores de salud, SaaS y
+    educación. Me enfoco en arquitectura frontend, Core Web Vitals, pruebas
+    automatizadas y análisis estático para que los equipos entreguen con
+    confiabilidad sin sacrificar la experiencia de desarrollo.
+  description: >-
+    Ingeniero Frontend Senior (6+ años) enfocado en arquitectura frontend,
+    rendimiento e ingeniería de calidad en salud, SaaS y educación.
 ---
