@@ -164,3 +164,59 @@ collections:
         }
       - { label: "Tags", name: "tags", widget: "string", i18n: duplicate }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  - label: "Projects"
+    name: "projects"
+    summary: "{{title}} ({{year}})"
+    folder: "content/projects"
+    slug: "{{year}}-{{slug}}"
+    create: true
+    i18n:
+      structure: single_file
+      locales: [en, pt, es]
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Year, name: year, widget: string, i18n: "duplicate" }
+      - { label: Role, name: role, widget: string, i18n: true }
+      - {
+          label: Experience,
+          name: experience,
+          widget: relation,
+          collection: "experiences",
+          value_field: "{{slug}}",
+          search_fields: ["company", "jobTitle"],
+          display_fields: ["company", "jobTitle"],
+          required: false,
+          i18n: "duplicate",
+        }
+      - { label: Description, name: description, widget: text, i18n: true }
+      - { label: Skills, name: skills, widget: string, i18n: "duplicate" }
+      - {
+          label: Live URL,
+          name: liveUrl,
+          widget: string,
+          required: false,
+          i18n: "duplicate",
+        }
+      - {
+          label: Repository URL,
+          name: repoUrl,
+          widget: string,
+          required: false,
+          i18n: "duplicate",
+        }
+      - {
+          label: Order,
+          name: order,
+          widget: number,
+          required: false,
+          i18n: "duplicate",
+        }
+      - label: Gallery
+        name: gallery
+        widget: list
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Caption, name: caption, widget: string }
+          - { label: Image, name: image, widget: image, required: false }

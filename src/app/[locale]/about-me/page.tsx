@@ -5,9 +5,11 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import { ArrowRight, GitHub, Linkedin } from "react-feather";
 import Experiences from "@/components/templates/Experiences";
+import { FeaturedWorkInteractive } from "@/components/templates/FeaturedWorkVariants";
 import { LOCALES, LocaleType } from "@/utils/constants";
 import { getAboutMePage } from "@/cms/pages";
 import { getAllPosts } from "@/cms/blog";
+import { getProjects } from "@/cms/projects";
 import { Metadata } from "next";
 
 dayjs.extend(utc);
@@ -65,6 +67,7 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
   const actions = HERO_ACTIONS_COPY[locale] ?? HERO_ACTIONS_COPY.en;
   const writingCopy = SELECTED_WRITING_COPY[locale] ?? SELECTED_WRITING_COPY.en;
   const selectedPosts = getAllPosts(locale).slice(0, 3);
+  const projects = getProjects(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-10 sm:pt-14">
@@ -73,7 +76,7 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
           <img
             src="/images/uploads/me.png"
             alt="Celo Reis"
-            className="w-28 h-28 md:w-36 md:h-36 rounded-full shrink-0 bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700 object-cover"
+            className="-scale-x-100 w-28 h-28 md:w-36 md:h-36 rounded-full shrink-0 bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700 object-cover"
           />
 
           <div className="flex-1 min-w-0">
@@ -119,6 +122,10 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
       </header>
 
       <Experiences locale={locale} />
+
+      <div className="py-10 sm:py-12 border-t border-zinc-200 dark:border-zinc-800 absolute -top-full -z-10">
+        <FeaturedWorkInteractive locale={locale} projects={projects} />
+      </div>
 
       {selectedPosts.length > 0 && (
         <section className="pt-8 sm:pt-10 border-t border-zinc-200 dark:border-zinc-800 pb-12">
