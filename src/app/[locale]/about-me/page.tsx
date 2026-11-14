@@ -76,7 +76,7 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
           <img
             src="/images/uploads/me.png"
             alt="Celo Reis"
-            className="w-28 h-28 md:w-36 md:h-36 rounded-full shrink-0 bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700 object-cover"
+            className="-scale-x-100 w-28 h-28 md:w-36 md:h-36 rounded-full shrink-0 bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700 object-cover"
           />
 
           <div className="flex-1 min-w-0">
