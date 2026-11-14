@@ -5,9 +5,11 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import { ArrowRight, GitHub, Linkedin } from "react-feather";
 import Experiences from "@/components/templates/Experiences";
+import { FeaturedWorkInteractive } from "@/components/templates/FeaturedWorkVariants";
 import { LOCALES, LocaleType } from "@/utils/constants";
 import { getAboutMePage } from "@/cms/pages";
 import { getAllPosts } from "@/cms/blog";
+import { getProjects } from "@/cms/projects";
 import { Metadata } from "next";
 
 dayjs.extend(utc);
@@ -65,6 +67,7 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
   const actions = HERO_ACTIONS_COPY[locale] ?? HERO_ACTIONS_COPY.en;
   const writingCopy = SELECTED_WRITING_COPY[locale] ?? SELECTED_WRITING_COPY.en;
   const selectedPosts = getAllPosts(locale).slice(0, 3);
+  const projects = getProjects(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 pt-10 sm:pt-14">
@@ -119,6 +122,10 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
       </header>
 
       <Experiences locale={locale} />
+
+      <div className="py-10 sm:py-12 border-t border-zinc-200 dark:border-zinc-800">
+        <FeaturedWorkInteractive locale={locale} projects={projects} />
+      </div>
 
       {selectedPosts.length > 0 && (
         <section className="pt-8 sm:pt-10 border-t border-zinc-200 dark:border-zinc-800 pb-12">
