@@ -51,6 +51,43 @@ const formatSkillLabel = (rawSkill: string): string => {
   return CANONICAL_SKILL_CASING[trimmed.toLowerCase()] ?? trimmed;
 };
 
+const DURATION_UNITS: Record<
+  LocaleType,
+  { year: [string, string]; month: [string, string] }
+> = {
+  en: { year: ["year", "years"], month: ["month", "months"] },
+  pt: { year: ["ano", "anos"], month: ["mês", "meses"] },
+  es: { year: ["año", "años"], month: ["mes", "meses"] },
+};
+
+const formatDuration = (
+  startDate: string,
+  endDate: string | undefined,
+  locale: LocaleType
+): string => {
+  const start = dayjs.utc(startDate);
+  const end = dayjs.utc(endDate || undefined);
+  const totalMonths = Math.max(0, end.diff(start, "month"));
+
+  if (totalMonths === 0) {
+    return end.locale(locale).to(start, true);
+  }
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  const units = DURATION_UNITS[locale] ?? DURATION_UNITS.en;
+  const parts: string[] = [];
+
+  if (years > 0) {
+    parts.push(`${years} ${years === 1 ? units.year[0] : units.year[1]}`);
+  }
+  if (months > 0) {
+    parts.push(`${months} ${months === 1 ? units.month[0] : units.month[1]}`);
+  }
+
+  return parts.join(", ");
+};
+
 export type ExperienceItemData = {
   jobTitle: string;
   company: string;
@@ -105,10 +142,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
             </span>
             <span className="mx-1">·</span>
             <span>
-              {dayjs
-                .utc(experience.endDate || undefined)
-                .locale(locale)
-                .to(dayjs.utc(experience.startDate), true)}
+              {formatDuration(experience.startDate, experience.endDate, locale)}
             </span>
           </p>
 

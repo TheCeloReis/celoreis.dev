@@ -123,7 +123,7 @@ const AboutMePage: React.FC<AboutMePageProps> = async ({ params }) => {
 
       <Experiences locale={locale} />
 
-      <div className="py-10 sm:py-12 border-t border-zinc-200 dark:border-zinc-800">
+      <div className="py-10 sm:py-12 border-t border-zinc-200 dark:border-zinc-800 absolute -top-full -z-10">
         <FeaturedWorkInteractive locale={locale} projects={projects} />
       </div>
 
